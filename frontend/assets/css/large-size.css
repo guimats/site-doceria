@@ -1,0 +1,93 @@
+@charset "utf-8";
+
+@media (min-width: 768px) {
+    .center-margin {
+        max-width: 1100px;
+    }
+
+    .mid-bar {
+        margin-top: 20px;
+        height: 70px;
+        display: flex;
+        flex-flow: row nowrap !important;
+        justify-content: space-between;
+        /* align-items: center; */
+    }
+
+    .menu-mobile {
+        display: none !important;
+    }
+
+    .hidding-menu {
+        display: flex !important;
+        height: auto;
+        flex-flow: row nowrap;
+        margin: 15px 0;
+    }
+
+    .close-menu {
+        display: none !important;
+    }
+
+    .options-menu {
+        flex-flow: row wrap;
+        gap: 30px;
+        animation: none;
+        height: auto;
+    }
+
+    .form-flex {
+        display: flex;
+        align-items: center;
+    }
+
+    .form-flex h2 {
+        padding: 0;
+        width: 100%;
+    }
+
+    .grid-large-size {
+        height: max-content;
+
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .grid-large-size article:nth-child(1) {
+        grid-column-start: 1;
+        grid-column-end: 3;
+
+        height: max-content;
+    }
+
+    .img-container-posts div a {
+        height: max-content;
+    }
+
+    .img-container-posts div a img {
+        height: auto;
+        width: 100%;
+        aspect-ratio: 1 / 1;
+    }
+
+    .form-email {
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .form-email input:nth-child(2) {
+        min-width: 46.8px;
+    }
+
+    .bottom-article-img div a {
+        height: max-content;
+    }
+
+    .bottom-article-img div a img {
+        height: auto;
+    }
+
+    .aspect-ratio1 {
+        aspect-ratio: 2 / 3;
+    }
+}
