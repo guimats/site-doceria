@@ -1,7 +1,7 @@
 
 export default class Menu {
     constructor(document) {
-        this.document = document
+        this.document = document;
     }
 
     init() {
@@ -12,12 +12,19 @@ export default class Menu {
         if(!this.document) return;
         this.document.addEventListener('click', e => {
             const el = e.target;
+
+            console.log(el);
+
             if (el.classList.contains('btn-menu')) {
                 this.openMenu();
             }
 
             if (el.classList.contains('hidding-btn-close')) {
                 this.closeMenu();
+            }
+
+            if(el.classList.contains('products-page')){
+                this.showProducts();
             }
         });
     }
@@ -39,6 +46,7 @@ export default class Menu {
         for (let line of lines) {
             line.style.display = 'none';
         }
+        return;
     }
 
     closeMenu() {
@@ -58,5 +66,22 @@ export default class Menu {
         for (let line of lines) {
             line.style.display = 'block';
         }
+        return;
+    }
+
+    showProducts() {
+        const productsList = this.document.querySelector('.products-list');
+        const productsMenu = this.document.querySelector('.dropdown-menu');
+        if (this.i == false) {
+            productsList.style.display = 'block';
+            productsMenu.style.display = 'block';
+            this.i = true;
+            return;
+        }
+
+        productsList.style.display = 'none';
+        productsMenu.style.display = 'none';
+        this.i = false;
+        return
     }
 }

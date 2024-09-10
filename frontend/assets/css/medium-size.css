@@ -7,7 +7,7 @@
 
     .hidding-menu {
         display: flex !important;
-        height: auto;
+        height: max-content;
         flex-flow: row nowrap;
         margin: 15px 0;
     }
@@ -60,4 +60,35 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .dropdown-menu {
+        display: none;
+        position: absolute;
+        background-color: #fff;
+        padding: 0 20px 20px 20px;
+        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.418);
+        z-index: 999;
+    }
+
+    .dropdown-menu a {
+        display: block;
+    }
+
+    .dropdown:hover .dropdown-menu{
+        display: block;
+    }
+
+    .products-list {
+        display: block;
+        margin: 0;
+    }
+
+    .options-menu .products-list li {
+        margin-top: 20px;
+    }
+
+    .options-menu li {
+        margin-top: 0;
+    }
+    
 }
