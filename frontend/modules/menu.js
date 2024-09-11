@@ -2,6 +2,7 @@
 export default class Menu {
     constructor(document) {
         this.document = document;
+        this.i = false;
     }
 
     init() {
@@ -10,6 +11,21 @@ export default class Menu {
 
     events() {
         if(!this.document) return;
+
+        window.addEventListener('resize', e => {
+
+            console.log(window.innerWidth);
+
+            if (window.innerWidth <= 600) {
+
+                console.log('DEU CERTO')
+
+                const productsMenu = this.document.querySelector('.dropdown-menu');
+
+                productsMenu.style.display = 'none';
+            }
+        })
+
         this.document.addEventListener('click', e => {
             const el = e.target;
 
@@ -23,7 +39,7 @@ export default class Menu {
                 this.closeMenu();
             }
 
-            if(el.classList.contains('products-page')){
+            if(el.classList.contains('products-page') && window.innerWidth < 600){
                 this.showProducts();
             }
         });

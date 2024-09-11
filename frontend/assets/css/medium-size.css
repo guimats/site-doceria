@@ -52,7 +52,7 @@
 
     .bottom-article-img div a img {
         aspect-ratio: 1 / 1;
-        height: calc(100% - 25px);
+        height: calc(100% - 25px); 
         width: 100%;
     }
 
@@ -75,11 +75,11 @@
     }
 
     .dropdown:hover .dropdown-menu{
-        display: block;
+        display: block !important;
     }
 
     .products-list {
-        display: block;
+        display: block !important;
         margin: 0;
     }
 
