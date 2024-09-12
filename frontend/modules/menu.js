@@ -18,10 +18,7 @@ export default class Menu {
 
             if (window.innerWidth <= 600) {
 
-                console.log('DEU CERTO')
-
                 const productsMenu = this.document.querySelector('.dropdown-menu');
-
                 productsMenu.style.display = 'none';
             }
         })

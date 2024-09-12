@@ -278,10 +278,6 @@ header h1 a:hover {
     font-weight: 500;
 }
 
-.img-grid div a:hover {
-    text-decoration: underline;
-}
-
 .form-container {
     margin: 50px 0;
 }
@@ -305,24 +301,6 @@ header h1 a:hover {
     font-size: 1em;
     border-radius: 30px;
     border: 1px solid black;
-}
-
-.subscribe {
-    border-radius: 30px;
-    border: none;
-    background-color: #ecc3de;
-    font-family: var(--font-dm-mono-display);
-    font-size: 1rem;
-    cursor: pointer;
-}
-
-.subscribe:hover {
-    background-color: #CEE3E2;
-}
-
-.subscribe:active {
-    background-color: #404040;
-    color: #fff;
 }
 
 .img-container-posts {
@@ -381,7 +359,7 @@ header h1 a:hover {
 }
 
 .connect-medias {
-    background-color: var(--color-lighter-pink-palette);
+    background-color: var(--color-lighter-blue-palette);
     padding: 10px;
     border-radius: 10px;
 }
@@ -410,7 +388,7 @@ header h1 a:hover {
 .contact-area {
     background-color: var(--color-lighter-pink-palette);
     padding: 30px 0;
-    margin-top: 30px;
+    margin-top: 10px;
     border-radius: 15px;
 }
 
@@ -570,19 +548,55 @@ header h1 a:hover {
     background-color: var(--color-dark-pink-palette);
 }
 
-.svgs-info {
-    margin-bottom: 200px;
+/* configuração banners */
+/* @keyframes carousel{
+    0%    { left:0; }
+    11%   { left:0; }
+    12.5% { left:-100%; }
+    23.5% { left:-100%; }
+    25%   { left:-200%; }
+    36%   { left:-200%; }
+    37.5% { left:-300%; }
+    48.5% { left:-300%; }
+    50%   { left:-400%; }
+    61%   { left:-400%; }
+    62.5% { left:-300%; }
+    73.5% { left:-300%; }
+    75%   { left:-200%; }
+    86%   { left:-200%; }
+    87.5% { left:-100%; }
+    98.5% { left:-100%; }
+    100%  { left:0; }
+} */
+/* @keyframes go{
+    0%    {  }
+    100%    { left:-300%; }
+}
+@keyframes back{
+    0%    { left:0; }
+    100%  { left:100%; }
 }
 
-.svgs-info svg {
-    /* transform: rotate(180deg); */
-    position: absolute;
+.carousel {
+    width: 100%; 
+    overflow: hidden; 
+    height: 100%;}
+
+ .paineis {
+    width: 500%; 
+    overflow: hidden;  
+    height: 100%;  
+    animation: carousel 30s infinite; position:relative;
 }
 
-.svgs-info svg:nth-child(1) {
-    z-index: 1;
-}
+.paineis article {
+    float: left; 
+    width: 20%;
+} 
 
-.svgs-info svg:nth-child(2) {
-    z-index: 0;
+.paineis img {
+    height: 100%; 
+    width: 100%
 }
+.carousel input[type=checkbox]:checked ~ .paineis{animation-play-state:paused; animation: go 10s
+} */
