@@ -426,7 +426,26 @@ header h1 a:hover {
 
 .clients-article {
     margin-top: 30px;
+}
+
+.clients-article h2 {
     text-align: center;
+}
+
+.clients-div {
+    display: flex;
+    flex-flow: column nowrap;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.svg-quote {
+    width: 15px;
+}
+
+.span-svg-close {
+    display: flex;
+    justify-content: right;
 }
 
 .post-legend {

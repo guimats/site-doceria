@@ -138,4 +138,8 @@
     .contact-inside-container {
         max-height: 181px;
     }
+
+    .clients-div {
+        flex-flow: row nowrap;
+    }
 }
