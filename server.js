@@ -17,8 +17,6 @@ const path = require('path');
 const helmet = require('helmet');
 const csrf = require('csurf');
 const { middlewareGlobal, checkCsrfError, csrfMiddleware } = require('./src/middlewares/middleware');
-const { inject } = require('@vercel/analytics');
-inject();
 
 app.use(helmet());
 
