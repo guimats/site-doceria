@@ -158,20 +158,31 @@
         transform: scale(1.1);
     }
 
-    .contact-button:hover {
-        transform: scale(1.02);
-    }
-
     .digital-menu-article {
-        flex-flow: row nowrap;
         justify-content: center;
         align-items: start;
+    }
+
+    .digital-menu-div {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+    }
+
+    .digital-menu-article div:nth-child(2) .menu-img {
+        grid-row: 1;
+        grid-column: 1 / 2;
+    }
+
+    .digital-menu-article div:nth-child(2) .digital-menu-text {
+        grid-row: 1;
+        grid-column: 2 / 3;
     }
 
     .digital-menu-text {
         padding: 30px;
         padding-right: 15px;
-        width: 60%;
+        width: 100%;
         margin: 0 auto;
     }
     
@@ -199,8 +210,12 @@
         transition: transform 0.3s;
     }
 
-    .digital-menu-article:hover .menu-img img {
+    .digital-menu-div:hover .menu-img img {
         transform: scale(0.87) rotateZ(15deg);
+    }
+
+    .digital-menu-article div:nth-child(2):hover .menu-img img {
+        transform: scale(0.87) rotateZ(-15deg);
     }
 
     .img-posts {
@@ -212,15 +227,19 @@
     }
 
     .digital-menu-h2 {
-        background-image: linear-gradient(#fff, #fff);
+        background-image: linear-gradient(var(--color-brown-palette), var(--color-brown-palette));
         background-repeat: no-repeat;
         background-size: 0% 3px;
         background-position: left bottom;
         width: max-content;
         transition: background-size 500ms ease;
     }
-    
-    .digital-menu-article:hover .digital-menu-h2 {
+
+    .digital-menu-article div:nth-child(2) .digital-menu-h2 {
+        background-position: right bottom;
+    }
+
+    .digital-menu-div:hover .digital-menu-h2 {
         background-size: 100% 3px;
     }
 

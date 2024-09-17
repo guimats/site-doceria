@@ -12,7 +12,7 @@
     --color-dark-pink-palette: #fc8284;
     --color-light-pink-palette: #F9B1B2;
     --color-lighter-pink-palette: rgb(255, 221, 222);
-    --color-dark-blue-palette: #9797ff;
+    --color-dark-blue-palette: #4764e5;
     --color-light-blue-palette: #D9D9FF;
     --color-lighter-blue-palette: #e9e9fc;
 }
@@ -45,7 +45,7 @@ li {
     padding: 15px 0;
     display: flex;
     /* gap: 30px; */
-    background-color: var(--color-dark-pink-palette);
+    background-color: var(--color-dark-blue-palette);
 }
 
 .top-bar div {
@@ -259,6 +259,7 @@ header h1 a:hover {
     width: 100%;
     object-fit: cover;
     height: 430px;
+    aspect-ratio: 1 / 1;
 }
 
 .img-grid {
@@ -396,56 +397,6 @@ header h1 a:hover {
 
 }
 
-.contact-area {
-    background-color: var(--color-lighter-pink-palette);
-    padding: 30px 0;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    border-radius: 15px;
-}
-
-.contact-area h2 {
-    font-size: 1.6rem;
-    padding-bottom: 20px;
-}
-
-.contact-area p {
-    font-size: 0.9rem;
-    font-weight: 100;
-    padding-bottom: 20px;
-}
-
-.contact-button {
-    display: flex;
-    background-color: var(--color-brown-palette);
-    border-radius: 25px;
-}
-
-.contact-button a {
-    display: flex;
-    /* justify-content: center; */
-    align-items: center;
-    color: #fff;
-    font-weight: 500;
-    width: 100%;
-    padding: 20px 10px;
-}
-
-.contact-button span {
-    display: flex;
-    align-items: center;
-    color: #fff;
-}
-
-.contact-button-figure {
-    width: 25px;
-    margin: 0 5px 0 10px;
-}
-
-.contact-inside-container {
-    padding: 0 30px;
-}
-
 .customer-article {
     margin-top: 2em;
     background-color: var(--color-lighter-blue-palette);
@@ -505,6 +456,14 @@ header h1 a:hover {
     gap: 10px;
     background-color: var(--color-dark-pink-palette);
     border-radius: 10px;
+}
+
+.digital-menu-div {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
 }
 
 .digital-menu-text h2 {
@@ -639,6 +598,7 @@ header h1 a:hover {
     flex-flow: column nowrap;
     margin-top: 30px;
     background-color: var(--color-dark-pink-palette);
+    border-radius: 10px;
 }
 
 /* GRID CONFIG */
