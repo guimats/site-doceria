@@ -1,0 +1,38 @@
+.side-bar {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-flow: column nowrap;
+    gap: 10px;
+    width: max-content;
+    height: 100%;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    transition: .2s;
+    padding: 5px;
+    margin: auto 0;
+    cursor: pointer;
+    z-index: 99;
+}
+
+.btn-whatsapp {
+    background-color: var(--color-dark-blue-palette);
+    box-shadow: rgba(0,0,0,0.24) 0 3px 8px;
+    border-radius: 10px;
+}
+
+.btn-whatsapp img {
+    width: 50px;
+}
+
+@media (min-width: 600px) {
+    .btn-whatsapp img {
+        width: 60px;
+        transition: transform 700ms;
+    }
+
+    .btn-whatsapp:hover {
+        transform: scale(1.1);
+    }
+}

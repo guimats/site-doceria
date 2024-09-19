@@ -12,12 +12,17 @@
     }
 
     .mid-bar {
-        margin-top: 20px;
+        margin-top: 0px;
         height: 70px;
         display: flex;
         flex-flow: row nowrap !important;
         justify-content: space-between;
-        /* align-items: center; */
+        align-items: center;
+        gap: 70px;
+    }
+
+    .mid-bar-menu {
+        justify-content: start;
     }
 
     .hidding-menu {

@@ -11,8 +11,8 @@
     --color-brown-palette: #432F28;
     --color-dark-pink-palette: #fc8284;
     --color-light-pink-palette: #F9B1B2;
-    --color-lighter-pink-palette: rgb(255, 221, 222);
-    --color-dark-blue-palette: #4764e5;
+    --color-lighter-pink-palette: #ffddde;
+    --color-dark-blue-palette: #1e36a1;
     --color-light-blue-palette: #D9D9FF;
     --color-lighter-blue-palette: #e9e9fc;
 }
@@ -25,6 +25,9 @@
     color: var(--color-brown-palette);
 }
 
+body {
+    position: relative;
+}
 
 a{
     text-decoration: none;
@@ -102,10 +105,16 @@ header h1 a:hover {
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
+    align-items: center;
+}
+
+.mid-bar-menu {
+    display: flex;
+    justify-content: center;
 }
 
 .mid-bar-bottom {
-    display: flex;
+    display: none;
     justify-content: end;
     align-items: center;
     gap: 20px;
@@ -119,7 +128,7 @@ header h1 a:hover {
 
 .mid-bar-bottom div {
     padding: 10px 10px 5px;
-    background-color: var(--color-lighter-pink-palette);
+    /* background-color: var(--color-dark-pink-palette); */
     border-radius: 10px;
 }
 
@@ -142,7 +151,7 @@ header h1 a:hover {
     border-radius: 20px;
     border: 1px solid black;
     margin-left: 20px;
-}
+}   
 
 .menu-mobile button {
     padding: 15px 0;
@@ -157,6 +166,7 @@ header h1 a:hover {
 }
 
 .close-menu {
+    z-index: 9999;
     text-align: right;
 }
 
@@ -179,9 +189,13 @@ header h1 a:hover {
 
 .btn-menu {
     border: none;
-    background-color: #fff;
-    font-size: 1em;
+    /* background-color: #fff; */
+    font-size: 1.7em;
     cursor: pointer;
+}
+
+.btn-space{
+    margin: 10px 0;
 }
 
 .products-div {
