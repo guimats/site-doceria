@@ -157,34 +157,11 @@ header h1 a:hover {
     padding: 15px 0;
 }
 
-.hidding-menu {
+.large-menu {
     display: none;
     margin-top: 15px;
     flex-flow: column wrap;
     height: 100vh;
-
-}
-
-.close-menu {
-    z-index: 9999;
-    text-align: right;
-}
-
-.options-menu {
-    display: flex;
-    flex-flow: column wrap;
-    height: max-content;
-    justify-content: space-around;
-
-    animation-duration: .3s;
-    animation-name: slidein;
-}
-
-.options-menu li,
-.close-menu a {
-    font-family: var(--font-dm-mono-display);
-    text-transform: uppercase;
-    margin-top: 20px;
 }
 
 .btn-menu {
@@ -201,17 +178,6 @@ header h1 a:hover {
 .products-div {
     vertical-align: top;
     display: flex;
-}
-
-.products-list {
-    display: none;
-    line-height: 1.5em;
-    margin: 10px 0 0px 30px;
-}
-
-.products-list li {
-    list-style: none;
-    font-size: 0.8em;
 }
 
 .products-page:hover {
@@ -233,6 +199,11 @@ header h1 a:hover {
 
 .container {
     margin-top: 30px;
+}
+
+.first-article-img {
+    width: 75%;
+    margin: 0 auto;
 }
 
 .dm-mono {
@@ -272,7 +243,6 @@ header h1 a:hover {
     height: 100%;
     width: 100%;
     object-fit: cover;
-    height: 430px;
     aspect-ratio: 1 / 1;
 }
 
@@ -622,14 +592,22 @@ header h1 a:hover {
     gap: 30px;
 }
 
-.digital-menu-article {
+
+.first-article {
     grid-row: 1;
 }
 
-.first-article {
+.digital-menu-article {
     grid-row: 2;
 }
 
+.info-article {
+    grid-row: 4
+}
+
+.grid-large-size {
+    grid-row: 3;
+}
 
 /* configuração banners */
 /* @keyframes carousel{

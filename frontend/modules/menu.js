@@ -12,85 +12,44 @@ export default class Menu {
     events() {
         if(!this.document) return;
 
+        // window listeners
         window.addEventListener('resize', e => {
+            const productsMenu = this.document.querySelector('.dropdown-menu');
 
-            console.log(window.innerWidth);
-
-            if (window.innerWidth <= 600) {
-
-                const productsMenu = this.document.querySelector('.dropdown-menu');
+            if (window.innerWidth >= 600) {
                 productsMenu.style.display = 'none';
+            } else {
+                productsMenu.style.display = '';
             }
         })
+        
+        window.addEventListener("scroll", e => {
+            const posicaoy = window.scrollY;
+            console.log(posicaoy);
+            if (posicaoy === 500) console.log('AQUI');
+          });
 
+        // Open/close menu
+        this.document.querySelector('.btn-menu').addEventListener('click', () => {
+            this.document.querySelector('.side-bar').classList.toggle('open-side-bar');
+            // this.document.body.classList.toggle('opacity-body');
+        })
+
+        this.document.querySelector('.close-symbol').addEventListener('click', () => {
+            this.document.querySelector('.side-bar').classList.toggle('open-side-bar');
+            // this.document.body.classList.toggle('opacity-body');
+        })
+
+
+        /// Products menu
         this.document.addEventListener('click', e => {
             const el = e.target;
-
-            console.log(el);
-
-            if (el.classList.contains('btn-menu')) {
-                this.openMenu();
-            }
-
-            if (el.classList.contains('hidding-btn-close')) {
-                this.closeMenu();
-            }
-
             if(el.classList.contains('products-page') && window.innerWidth < 600){
-                this.showProducts();
+                this.document.querySelector('.side-products-list').classList.toggle('open-dropdown-menu');
+                this.document.querySelector('.dropdown-menu').classList.toggle('open-dropdown-menu');
+
+                this.document.querySelector('.products-arrow').classList.toggle('up-arrow');
             }
         });
-    }
-
-    openMenu() {
-        const optionsMenu = this.document.querySelector('.hidding-menu');
-        const menuMobile = this.document.querySelector('.menu-mobile');
-        const midBar = this.document.querySelector('.mid-bar');
-        const main = this.document.querySelector('main');
-        const footer = this.document.querySelector('footer');
-        const lines = this.document.querySelectorAll('.lines');
-        optionsMenu.style.display = 'flex';
-        menuMobile.style.display = 'none';
-        midBar.style.display = 'none';
-        main.style.display = 'none';
-        footer.style.display = 'none';
-        for (let line of lines) {
-            line.style.display = 'none';
-        }
-        return;
-    }
-
-    closeMenu() {
-        const optionsMenu = document.querySelector('.hidding-menu');
-        const menuMobile = document.querySelector('.menu-mobile');
-        const midBar = document.querySelector('.mid-bar');
-        const main = document.querySelector('main');
-        const footer = document.querySelector('footer');
-        const lines = document.querySelectorAll('.lines');
-        optionsMenu.style.display = 'none';
-        menuMobile.style.display = 'block';
-        midBar.style.display = 'flex';
-        main.style.display = 'block';
-        footer.style.display = 'block';
-        for (let line of lines) {
-            line.style.display = 'block';
-        }
-        return;
-    }
-
-    showProducts() {
-        const productsList = this.document.querySelector('.products-list');
-        const productsMenu = this.document.querySelector('.dropdown-menu');
-        if (this.i == false) {
-            productsList.style.display = 'block';
-            productsMenu.style.display = 'block';
-            this.i = true;
-            return;
-        }
-
-        productsList.style.display = 'none';
-        productsMenu.style.display = 'none';
-        this.i = false;
-        return
     }
 }

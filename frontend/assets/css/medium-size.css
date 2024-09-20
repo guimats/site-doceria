@@ -15,35 +15,41 @@
         display: none !important;
     }
 
-    .hidding-menu {
+    .large-menu {
         display: flex !important;
         height: max-content;
         flex-flow: row nowrap;
         margin: 15px 0;
     }
 
-    .close-menu {
-        display: none !important;
-    }
-
     .options-menu {
+        display: flex;
         flex-flow: row wrap;
+        justify-content: space-around;
+        height: max-content;
         gap: 10px;
-        animation: none;
         height: auto;
     }
 
     .options-menu .products-list li {
         margin-top: 10px;
+        list-style: none;
+        font-size: 0.8em;
     }
 
     .options-menu li {
         margin-top: 0;
         padding: 5px;
+        font-family: var(--font-dm-mono-display);
+        text-transform: uppercase;
     }
 
     .options-menu li:hover {
         background-color: var(--color-lighter-blue-palette);
+    }
+
+    .first-article-img {
+        width: 100%;
     }
 
     .img-container-posts>div {
@@ -141,6 +147,7 @@
 
     .products-list {
         display: block !important;
+        line-height: 1.5em;
         margin: 0;
     } 
     

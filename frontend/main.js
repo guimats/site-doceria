@@ -4,6 +4,7 @@ import './assets/css/style.css';
 import './assets/css/medium-size.css';
 import './assets/css/large-size.css';
 import './assets/css/nav-social.css';
+import './assets/css/nav-side.css';
 import './assets/css/background-menu.css';
 
 import Login from './modules/login';

@@ -7,14 +7,25 @@
 
 .inside-background {
     background-color: #ffffff;
-    padding: 10px 0 20px;
+    padding-top: 1px;
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.22);
-    max-width: 900px;
     margin: 0 auto;
+    border-radius: 20px;
 }
 
 @media (min-width: 600px) {
     .background-menu {
         padding: 20px 70px;
+    }
+
+    .inside-background {
+        max-width: 445px;
+    }
+}
+
+@media (min-width: 905px) {
+    .inside-background {
+        padding: 5px 0;
+        max-width: 900px;
     }
 }
