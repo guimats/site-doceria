@@ -3,8 +3,8 @@ export default class Menu {
     constructor(document) {
         this.document = document;
         this.i = false;
+        this.active = false;
     }
-
     init() {
         this.events();
     }
@@ -25,30 +25,31 @@ export default class Menu {
         
         window.addEventListener("scroll", e => {
             const posicaoy = window.scrollY;
-            console.log(posicaoy);
-            if (posicaoy === 500) console.log('AQUI');
+
+            // console.log(posicaoy, this.active);
+            
+            if (posicaoy >= 500 && !this.active) {
+                this.document.querySelector('.scroll-menu').classList.toggle('open-scroll-menu');
+                this.active = true;
+            } else if (posicaoy < 500 && this.active) {
+                this.document.querySelector('.scroll-menu').classList.toggle('open-scroll-menu');
+                this.active = false;
+            }
           });
 
-        // Open/close menu
-        this.document.querySelector('.btn-menu').addEventListener('click', () => {
-            this.document.querySelector('.side-bar').classList.toggle('open-side-bar');
-            // this.document.body.classList.toggle('opacity-body');
-        })
-
-        this.document.querySelector('.close-symbol').addEventListener('click', () => {
-            this.document.querySelector('.side-bar').classList.toggle('open-side-bar');
-            // this.document.body.classList.toggle('opacity-body');
-        })
-
-
-        /// Products menu
         this.document.addEventListener('click', e => {
             const el = e.target;
+            
+            // Products menu
             if(el.classList.contains('products-page') && window.innerWidth < 600){
                 this.document.querySelector('.side-products-list').classList.toggle('open-dropdown-menu');
                 this.document.querySelector('.dropdown-menu').classList.toggle('open-dropdown-menu');
-
                 this.document.querySelector('.products-arrow').classList.toggle('up-arrow');
+            }
+
+            // Open/close menu
+            if(el.classList.contains('btn-menu') || el.classList.contains('close-symbol')) {
+                this.document.querySelector('.side-bar').classList.toggle('open-side-bar');
             }
         });
     }

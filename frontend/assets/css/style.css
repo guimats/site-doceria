@@ -15,6 +15,7 @@
     --color-dark-blue-palette: #1e36a1;
     --color-light-blue-palette: #D9D9FF;
     --color-lighter-blue-palette: #e9e9fc;
+    --box-shadow-standard: 2px 0 4px rgba(0, 0, 0, 0.4);
 }
 
 * {

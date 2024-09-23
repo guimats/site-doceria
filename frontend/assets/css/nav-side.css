@@ -9,7 +9,7 @@
     position: fixed;
     padding-top: 30px;
     left: 0px;
-    transition: all .5s;
+    transition: all 1s;
     z-index: 99;
     background-color: #fff;
     overflow: hidden;
@@ -69,7 +69,7 @@
 }
 
 .opacity-side-bar {
-    opacity: 1 !important;
+    opacity: 1;
 }
 
 .open-dropdown-menu {

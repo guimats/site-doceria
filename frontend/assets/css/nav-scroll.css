@@ -1,0 +1,20 @@
+.scroll-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row-reverse nowrap;
+    position: fixed;
+    background-color: #fff;
+    width: 100%;
+    padding: 0 25px;
+    box-shadow: var(--box-shadow-standard);
+    height: 0;
+    overflow: hidden;
+    transition: all .3s;
+    z-index: 98;
+}
+
+.open-scroll-menu {
+    height: auto;
+    padding: 7px 25px;
+}

@@ -18,7 +18,7 @@
 
 .btn-whatsapp {
     background-color: var(--color-dark-blue-palette);
-    box-shadow: rgba(0,0,0,0.24) 0 3px 8px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.24);
     border-radius: 10px;
 }
 
