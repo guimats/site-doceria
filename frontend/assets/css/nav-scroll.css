@@ -10,11 +10,42 @@
     box-shadow: var(--box-shadow-standard);
     height: 0;
     overflow: hidden;
-    transition: all .3s;
+    transition: all .7s ease;
+    z-index: 98;
+}
+
+.scroll-menu-large-size {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row nowrap;
+    position: fixed;
+    background-color: #fff;
+    width: 100%;
+    padding: 0 25px;
+    box-shadow: var(--box-shadow-standard);
+    height: 0;
+    overflow: hidden;
+    transition: all .7s ease;
     z-index: 98;
 }
 
 .open-scroll-menu {
-    height: auto;
+    height: 90px;
     padding: 7px 25px;
+}
+
+@media (min-width: 600px) {
+    .scroll-menu-large-size .options-menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+@media (min-width: 905px) {
+    .scroll-menu-large-size .options-menu {
+        gap: 40px;
+    }
 }

@@ -4,6 +4,8 @@ export default class Menu {
         this.document = document;
         this.i = false;
         this.active = false;
+        this.large = window.innerWidth > 600 ? true : false;
+        this.scrollBefore = 0;
     }
     init() {
         this.events();
@@ -17,22 +19,46 @@ export default class Menu {
             const productsMenu = this.document.querySelector('.dropdown-menu');
 
             if (window.innerWidth >= 600) {
+                if (this.active) this.active = false;
+                this.document.querySelector('.scroll-menu').classList.remove('open-scroll-menu');
+                this.large = true;
                 productsMenu.style.display = 'none';
             } else {
+                if (this.active) this.active = false;
+                this.document.querySelector('.scroll-menu-large-size').classList.remove('open-scroll-menu');
+                this.large = false;
                 productsMenu.style.display = '';
             }
         })
         
         window.addEventListener("scroll", e => {
             const posicaoy = window.scrollY;
+            const scrollUp = this.scrollBefore > posicaoy ? true : false;
 
-            // console.log(posicaoy, this.active);
+            // console.log(window.innerWidth, scrollUp);
+
+            this.scrollBefore = posicaoy; 
             
+            // mobile devices
+            if (window.innerWidth < 600) {
+                if (scrollUp && posicaoy >= 500 && !this.active) {
+                    this.document.querySelector('.scroll-menu').classList.add('open-scroll-menu');
+                    this.active = true;
+                    return;
+                } else if (!scrollUp && this.active || posicaoy < 500) {
+                    this.document.querySelector('.scroll-menu').classList.remove('open-scroll-menu');
+                    this.active = false;
+                    return;
+                }
+                return;
+            }
+            
+            // lerges devices
             if (posicaoy >= 500 && !this.active) {
-                this.document.querySelector('.scroll-menu').classList.toggle('open-scroll-menu');
+                this.document.querySelector('.scroll-menu-large-size').classList.add('open-scroll-menu');
                 this.active = true;
             } else if (posicaoy < 500 && this.active) {
-                this.document.querySelector('.scroll-menu').classList.toggle('open-scroll-menu');
+                this.document.querySelector('.scroll-menu-large-size').classList.remove('open-scroll-menu');
                 this.active = false;
             }
           });
