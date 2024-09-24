@@ -42,6 +42,10 @@
         align-items: center;
         gap: 10px;
     }
+
+    .options-menu .scroll-logo:hover {
+        background-color: #fff;
+    }
 }
 
 @media (min-width: 905px) {

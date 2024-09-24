@@ -41,11 +41,11 @@ export default class Menu {
             
             // mobile devices
             if (window.innerWidth < 600) {
-                if (scrollUp && posicaoy >= 500 && !this.active) {
+                if (scrollUp && posicaoy >= 200 && !this.active) {
                     this.document.querySelector('.scroll-menu').classList.add('open-scroll-menu');
                     this.active = true;
                     return;
-                } else if (!scrollUp && this.active || posicaoy < 500) {
+                } else if (!scrollUp && this.active || posicaoy < 200) {
                     this.document.querySelector('.scroll-menu').classList.remove('open-scroll-menu');
                     this.active = false;
                     return;
@@ -54,10 +54,10 @@ export default class Menu {
             }
             
             // lerges devices
-            if (posicaoy >= 500 && !this.active) {
+            if (posicaoy >= 200 && !this.active) {
                 this.document.querySelector('.scroll-menu-large-size').classList.add('open-scroll-menu');
                 this.active = true;
-            } else if (posicaoy < 500 && this.active) {
+            } else if (posicaoy < 200 && this.active) {
                 this.document.querySelector('.scroll-menu-large-size').classList.remove('open-scroll-menu');
                 this.active = false;
             }
