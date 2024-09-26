@@ -71,7 +71,6 @@
         height: auto;
         width: 100%;
         aspect-ratio: 1 / 1;
-        min-height: 263.55px;
     }
 
     .form-email {
@@ -197,8 +196,32 @@
         color: #fff;
     }
 
+    .digital-menu-h2 {
+        background-image: linear-gradient(var(--color-brown-palette), var(--color-brown-palette));
+    }
+
     .menu-img img {
         aspect-ratio: 1 / 1;
         max-width: 400px;
+    }
+
+    .img-container .img-grid div {
+        display: flex;
+        flex-flow: column nowrap;
+        width: 80%;
+        padding: 0 15px;
+        height: 0;
+        overflow: hidden;
+        transition: all .4s;
+    }
+
+    .img-container .img-grid:hover div {
+        height: 70px;
+        padding: 15px;
+        /* overflow: visible; */
+    }
+
+    .img-grid div a:hover {
+        text-decoration: underline;
     }
 }

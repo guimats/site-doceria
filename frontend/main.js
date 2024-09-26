@@ -7,12 +7,12 @@ import './assets/css/nav-social.css';
 import './assets/css/nav-side.css';
 import './assets/css/nav-scroll.css';
 import './assets/css/background-menu.css';
-import './assets/css/swiper.css';
+// import './assets/css/swiper.css';
 
 import Login from './modules/login';
 import Contato from './modules/contato';
 import Menu from './modules/menu.js';
-import './modules/swiper.js';
+// import './modules/swiper.js';
 
 const login = new Login('.form-login');
 const cadastro = new Login('.form-cadastro');

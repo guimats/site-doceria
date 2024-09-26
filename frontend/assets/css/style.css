@@ -15,7 +15,7 @@
     --color-dark-blue-palette: #1e36a1;
     --color-light-blue-palette: #D9D9FF;
     --color-lighter-blue-palette: #e9e9fc;
-    --box-shadow-standard: 2px 0 4px rgba(0, 0, 0, 0.4);
+    --box-shadow-standard: 0 0 4px rgba(0, 0, 0, 0.3);
 }
 
 * {
@@ -205,6 +205,7 @@ header h1 a:hover {
 .first-article-img {
     width: 75%;
     margin: 0 auto;
+    box-shadow: var(--box-shadow-standard);
 }
 
 .dm-mono {
@@ -316,6 +317,10 @@ header h1 a:hover {
     aspect-ratio: 1 / 1;
     width: 100%;
     object-fit: cover;
+}
+
+.img-posts img {
+    box-shadow: var(--box-shadow-standard);
 }
 
 .img-posts div {

@@ -44,9 +44,9 @@
         text-transform: uppercase;
     }
 
-    .options-menu li:hover {
+    /* .options-menu li:hover {
         background-color: var(--color-lighter-blue-palette);
-    }
+    } */
 
     .first-article-img {
         width: 100%;
@@ -56,50 +56,30 @@
         height: 33.33%;
     }
 
-    .img-container-posts div a img {
+    /* .img-container-posts div a img {
         height: 400px;
-    }
+    } */
 
     .img-container {
         display: grid !important;
         grid-template-columns: repeat(3, 1fr);
     }
 
-    .img-container .img-grid {
-        position: relative;
-    }
-
     .img-container .img-grid div {
         display: none;
-        width: 80%;
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%)
     }
 
-    .img-container .img-grid:hover div {
-        display: inline-block;
-        animation: position .1s linear;
-
-        bottom: 0;
+    .img-container .img-grid {
+        position: relative;
+        transition: all .3s;
     }
 
-    @keyframes position {
-        0% {
-            bottom: -40px;
-        }
-
-        50% {
-            bottom: -20px;
-        }
-
-        100% {
-            bottom: 0px;
-        }
+    .img-container .img-grid:hover {
+        transform: scale(1.1);
     }
 
-    .img-grid div a:hover {
-        text-decoration: underline;
+    .media-flex {
+        transition: all .3s;
     }
 
     .media-flex:hover {
@@ -125,7 +105,7 @@
 
     .img-container-posts {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .dropdown-menu {
@@ -208,7 +188,7 @@
         width: 100%;
         max-width: 400px;
         margin-top: 10px;
-        transition: transform 0.3s;
+        transition: all 0.3s;
     }
 
     .digital-menu-div:hover .menu-img img {
@@ -216,7 +196,7 @@
     }
 
     .img-posts {
-        transition: transform 0.15s;
+        transition: all 0.3s;
     }
 
     .img-posts:hover {
@@ -224,16 +204,12 @@
     }
 
     .digital-menu-h2 {
-        background-image: linear-gradient(var(--color-brown-palette), var(--color-brown-palette));
+        background-image: linear-gradient(#fff, #fff);
         background-repeat: no-repeat;
         background-size: 0% 3px;
         background-position: left bottom;
         width: max-content;
         transition: background-size 500ms ease;
-    }
-
-    .digital-menu-article div:nth-child(2) .digital-menu-h2 {
-        background-position: right bottom;
     }
 
     .digital-menu-div:hover .digital-menu-h2 {
@@ -246,4 +222,17 @@
         font-size: 16px;
     }
 
+    li.menu-links {
+        background-image: linear-gradient(black, black);
+        background-repeat: no-repeat;
+        background-size: 0% 2px;
+        background-position: left bottom;
+        width: max-content;
+        transition: background-size 500ms ease;
+        padding-bottom: 2px;
+    }
+
+     li.menu-links:hover {
+        background-size: 80% 2px;
+    }
 }
