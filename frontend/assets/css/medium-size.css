@@ -229,12 +229,10 @@
   }
 
   .digital-menu-h2 {
-    background-image: linear-gradient(#fff, #fff);
-    background-repeat: no-repeat;
     background-size: 0% 3px;
-    background-position: left bottom;
-    width: max-content;
     transition: background-size 500ms ease;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .digital-menu-div:hover .digital-menu-h2 {

@@ -214,13 +214,13 @@
   }
 
   .digital-menu-text p {
-    padding-top: 50px;
+    padding-top: 70px;
     font-size: 1.2em;
     line-height: 1.8em;
   }
 
   .digital-menu-text strong {
-    color: #fff;
+    color: var(--color-brown-palette);
   }
 
   .digital-menu-div:hover .menu-img img {
