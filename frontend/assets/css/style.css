@@ -410,6 +410,7 @@ header h1 a:hover {
 
 .customer-article {
   margin-top: 2em;
+  margin-bottom: 20px;
   background-color: var(--color-lighter-blue-palette);
   padding: 1em;
 }

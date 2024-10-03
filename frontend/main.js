@@ -7,6 +7,7 @@ import './assets/css/nav-social.css';
 import './assets/css/nav-side.css';
 import './assets/css/nav-scroll.css';
 import './assets/css/background-menu.css';
+import './assets/css/about-us/style.css';
 // import './assets/css/swiper.css';
 
 import Login from './modules/login';
@@ -25,13 +26,17 @@ cadastro.init();
 contato.init();
 menu.init();
 
-document.addEventListener('mousemove', e => {
+document.addEventListener('mousemove', (e) => {
   const el = e.target;
 
-  if(el.classList.contains('alert-success') || el.classList.contains('alert-danger')) {
+  if (
+    el.classList.contains('alert-success') ||
+    el.classList.contains('alert-danger')
+  ) {
     setTimeout(() => {
       el.remove();
-    }, 3000);};
+    }, 3000);
+  }
 });
 
 // document.addEventListener('click', e => {
