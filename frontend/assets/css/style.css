@@ -40,9 +40,14 @@ li {
   list-style: none;
 }
 
+.center-containers {
+  width: 93%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .center-margin {
   height: max-content;
-  width: 93%;
   margin: 0 auto;
 }
 
@@ -467,7 +472,6 @@ header h1 a:hover {
   padding: 10px;
   gap: 10px;
   background-color: var(--color-dark-pink-palette);
-  border-radius: 10px;
 }
 
 .digital-menu-div {
@@ -610,7 +614,6 @@ header h1 a:hover {
   justify-content: center;
   align-items: center;
   flex-flow: column nowrap;
-  margin-top: 30px;
   background-color: var(--color-dark-pink-palette);
   border-radius: 10px;
 }
@@ -648,55 +651,6 @@ header h1 a:hover {
   margin-right: auto;
 }
 
-/* configuração banners */
-/* @keyframes carousel{
-    0%    { left:0; }
-    11%   { left:0; }
-    12.5% { left:-100%; }
-    23.5% { left:-100%; }
-    25%   { left:-200%; }
-    36%   { left:-200%; }
-    37.5% { left:-300%; }
-    48.5% { left:-300%; }
-    50%   { left:-400%; }
-    61%   { left:-400%; }
-    62.5% { left:-300%; }
-    73.5% { left:-300%; }
-    75%   { left:-200%; }
-    86%   { left:-200%; }
-    87.5% { left:-100%; }
-    98.5% { left:-100%; }
-    100%  { left:0; }
-} */
-/* @keyframes go{
-    0%    {  }
-    100%    { left:-300%; }
+.container-about {
+  grid-row: 5;
 }
-@keyframes back{
-    0%    { left:0; }
-    100%  { left:100%; }
-}
-
-.carousel {
-    width: 100%;
-    overflow: hidden;
-    height: 100%;}
-
- .paineis {
-    width: 500%;
-    overflow: hidden;
-    height: 100%;
-    animation: carousel 30s infinite; position:relative;
-}
-
-.paineis article {
-    float: left;
-    width: 20%;
-}
-
-.paineis img {
-    height: 100%;
-    width: 100%
-}
-.carousel input[type=checkbox]:checked ~ .paineis{animation-play-state:paused; animation: go 10s
-} */
